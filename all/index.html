@@ -110,9 +110,11 @@
         var admin_menu = document.getElementById("menu_for_admin");
         var is_admin = document.getElementById("is_admin").innerHTML;
         if (is_admin == "Yes") {
+            alert('admin');
             admin_menu.style.display = 'inline';
         }
         else {
+            alert('not admin');
             admin_menu.style.display = 'none';
         }
      
