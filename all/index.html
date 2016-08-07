@@ -16,10 +16,10 @@
 
     <!-- Custom CSS -->
     <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,15 +55,20 @@
                     <li>
                         <a href="https://jksw.github.io/registry/all/measure.html">Measures</a>
                     </li>
-                    <li>
+                    <li id="menu_for_admin">
                         <a href="#">Admin</a>
                     </li>
+
                     <li>
                         <a href="https://c2bkr962.caspio.com/folderlogout">Logout</a>
                     </li>
 
 
                 </ul>
+
+                <div id="is_admin" style="display:none">[@authfield:admin]</div>
+
+
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -92,13 +97,26 @@
 
 
     </div>
-    
-     <!-- jQuery Version 1.11.1 -->
+
+    <!-- jQuery Version 1.11.1 -->
     <script src="../js/jquery.js"></script>
 
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+
+    <!--hide menu for admin conditionally-->
+    <script type="text/javascript">
+        var admin_menu = document.getElementById("menu_for_admin");
+        var is_admin = document.getElementById("is_admin").innerHTML;
+        if (is_admin == "Yes") {
+            admin_menu.style.display = 'inline';
+        }
+        else {
+            admin_menu.style.display = 'none';
+        }
+     
+    </script>
 
 </body>
 
